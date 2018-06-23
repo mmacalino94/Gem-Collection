@@ -1,63 +1,63 @@
-body{
-	background-image: url("../images/background.png")
+*	{
+	color: white;
 }
-div{
-	background-color: white;
-	margin: 10px;
-	width: 25%
+
+body	{
+	background-image: url("../images/background2.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 12px;
+	align-content: center;
+
 }
-div{
-	border: solid 2px antiquewhite;
-	padding: 10px;
+
+
+div	{
+	margin: 2px;
+	margin-left: 5px;
+	width: 25%;
+	align-content: center;
+	border: dashed 2px lime;
+	padding: 2px;
 }
-h1, h3, span{
+
+h1, h3, span	{
 	font-weight: bold;
 	text-align: center;
 }
-h1{
+h1	{
 	font-size: 30pt;
 }
-ol{
+ol	{
 	list-style: decimal inside; 
 }
 ul {
 	list-style: disc inside;
 	text-indent: 20px;
 }
-/* Specfic Elements*/
-div.header, div.gems{
-	background-color: #e0e0eb;
+
+p	{
+	color: white;
 }
-div.header, div.instructions{
+
+div.header, div.instructions	{
 	width: 50%;
 }
-/* Classes */
-.numberToMatch, .winsAndLosses{
+
+.goal, .score	{
 	float: left;
 	width: 15%;
 	height: 60px;
 }
-.userTotal{
+.userTotal	{
 	width: 15%;
 	height: 60px;
 }
-.currency{
+.currency	{
 	clear: both;
 }
-.gemImage{
+.gemImage	{
 	height: 60px;
 	margin: 10px;
-}
-/* IDs */
-#chaos{
-	color: #3092c7;
-}
-#crash{
-	color: #00aa59;
-}
-#mario{
-	color: #ec4b5f;
-}
-#rupee{
-	color: #ffc225;
 }

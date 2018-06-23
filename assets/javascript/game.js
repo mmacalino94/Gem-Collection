@@ -1,91 +1,91 @@
-$( document ).ready(function(){
-    var Random=Math.floor(Math.random()*101+19)
+$(document).ready(function()  {
+    var currencyValue=Math.floor(Math.random()*100+19)
     
-    $("#randomNumber").text(Random);
+    $("#randomNumber").text(currencyValue);
     
     var num1= Math.floor(Math.random()*11+1)
     var num2= Math.floor(Math.random()*11+1)
     var num3= Math.floor(Math.random()*11+1)
     var num4= Math.floor(Math.random()*11+1)
    
-    var userTotal= 0; 
+    var score= 0; 
     var wins= 0;
     var losses = 0;
    
   $("#numberWins").text(wins);
   $("#numberLosses").text(losses);
  
-  function reset(){
-        Random=Math.floor(Math.random()*101+19);
-        console.log(Random)
-        $("#randomNumber").text(Random);
+  function reset()  {
+        currencyValue=Math.floor(Math.random()*100+19);
+        console.log(currencyValue)
+        $("#randomNumber").text(currencyValue);
         num1= Math.floor(Math.random()*11+1);
         num2= Math.floor(Math.random()*11+1);
         num3= Math.floor(Math.random()*11+1);
         num4= Math.floor(Math.random()*11+1);
-        userTotal= 0;
-        $("#finalTotal").text(userTotal);
+        score= 0;
+        $("#finalTotal").text(score);
         } 
  
-  function yay(){
+  function win()  {
   alert("You won!");
     wins++; 
     $("#numberWins").text(wins);
     reset();
   }
   
-  function loser(){
+  function lose(){
   alert ("You lose!");
     losses++;
     $("#numberLosses").text(losses);
     reset()
   }
   
-    $("#one").on ("click", function(){
-      userTotal = userTotal + num1;
-      console.log("New userTotal= " + userTotal);
-      $("#finalTotal").text(userTotal); 
+    $("#chaos").on ("click", function(){
+      score = score + num1;
+      console.log("New score= " + score);
+      $("#finalTotal").text(score); 
             
-          if (userTotal == Random){
-            yay();
+          if (score == currencyValue){
+            win();
           }
-          else if ( userTotal > Random){
-            loser();
+          else if ( score > currencyValue){
+            lose();
           }   
     })  
-    $("#two").on ("click", function(){
-      userTotal = userTotal + num2;
-      console.log("New userTotal= " + userTotal);
-      $("#finalTotal").text(userTotal); 
-          if (userTotal == Random){
-            yay();
+    $("#wumpa").on ("click", function(){
+      score = score + num2;
+      console.log("New score= " + score);
+      $("#finalTotal").text(score); 
+          if (score == currencyValue){
+            win();
           }
-          else if ( userTotal > Random){
-            loser();
+          else if ( score > currencyValue){
+            lose();
           } 
     })  
-    $("#three").on ("click", function(){
-      userTotal = userTotal + num3;
-      console.log("New userTotal= " + userTotal);
-      $("#finalTotal").text(userTotal);
+    $("#coin").on ("click", function(){
+      score = score + num3;
+      console.log("New score= " + score);
+      $("#finalTotal").text(score);
   
-            if (userTotal == Random){
-            yay();
+            if (score == currencyValue){
+            win();
           }
-          else if ( userTotal > Random){
-            loser();
+          else if ( score > currencyValue){
+            lose();
           } 
     })  
-    $("#four").on ("click", function(){
-      userTotal = userTotal + num4;
-      console.log("New userTotal= " + userTotal);
-      $("#finalTotal").text(userTotal); 
+    $("#rupee").on ("click", function(){
+      score = score + num4;
+      console.log("New score= " + score);
+      $("#finalTotal").text(score); 
         
-            if (userTotal == Random){
-            yay();
+            if (score == currencyValue){
+            win();
           }
-          else if ( userTotal > Random){
-            loser();
+          else if ( score > currencyValue){
+            lose();
           }
     });   
   }); 

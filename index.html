@@ -4,38 +4,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Crystal Collector Assignment</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 </head>
 <body>
 	<div class="header">
 		<h1>Video Game Treasure Hunter</h1>
 	</div>
 	<div class="instructions">
-		<h3>Instructions</h3>
+		<h3>How To Play</h3>
 		</br>
-		<ol>
-			<li>You will be given a random number at the start of the game.<span>"Number To Get"</span></li>
-			<li>There are four video game currency items below.</li>
-			<ul>
-				<li id="chaos">Chaos Emerald</li>
-				<li id="crash">Wumpa Fruit</li>
-				<li id="mario">Coin</li>
-				<li id="rupee">Red Rupee</li>
-			</ul>
-			<li>By clicking on a video game currency item, you will add a specific amount of points to your total score.</li>
-			<li>You win the game by matching your total score to the random number.</li>
-			<li>You lose the game if your total score goes above the random number.</li>
-			<li>The value of each currency item is hidden from you until you click on it.</li>
-			<li>Each time when the game starts, the game will change the values of each video game currecnty item.</li>
-		</ol>
+		<p><b>"Goal" </b>: Random Number given to you at the start of the game</p>
+		<p>These are the four gamer currency items. Each of them will have a different currency value</p>
+		<ul>
+			<li>Chaos Emerald</li>
+			<li>Wumpa Fruit</li>
+			<li>Mario Coin</li>
+			<li>Hyrule Red Rupee</li>
+		</ul>
+		<p>Click on a gamer currency item to add your total score points.</p>
+		<p><b>Win: </b>Match your total score to the <b>"Goal"</b></p>
+		<p><b>Lose: </b>If your score is higher than the Goal</p>
+		<p>The value of each currency item is hidden from you until you click on it.</p>
+		<p>In each round, the currency value will change</p>
+		<p>Grab that calculator and have fun!</p>
 	</div>
-	<div class="numberToMatch">
-		<h2>Number To Get:
+	<div class="goal">
+		<h2>Goal:
 			<span id= "randomNumber"></span>
 		</h2>
 	</div>
-	<div class="winsAndLosses">
+	<div class="score">
 		<h2>Wins:
 			<span id= "numberWins"></span>
 			</br>
@@ -44,10 +44,10 @@
 		</h2>
 	</div>
 	<div class="currency">
-		<img src="assets/images/chaos.png" class=gemImage id="one" alt="Chaos Emerald">
-		<img src="assets/images/crash.png" class=gemImage id="two" alt="Wumpa Fruit">
-		<img src="assets/images/mario.png" class=gemImage id= "three" alt="Coin">
-		<img src="assets/images/rupee.png" class=gemImage id= "four" alt="Red Rupee">
+		<img src="assets/images/chaos.png" class=gemImage id="chaos" alt="Chaos Emerald">
+		<img src="assets/images/crash.png" class=gemImage id="wumpa" alt="Wumpa Fruit">
+		<img src="assets/images/mario.png" class=gemImage id= "coin" alt="Coin">
+		<img src="assets/images/rupee.png" class=gemImage id= "rupee" alt="Red Rupee">
 	</div>
 	<div class="userTotal">
 		<h2>Your total score is:
