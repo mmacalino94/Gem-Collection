@@ -17,6 +17,7 @@ $(document).ready(function()  {
     $("#numberLosses").text(losses);
  
   function reset()  {
+    
         currencyValue=Math.floor(Math.random()*100+19);
         console.log(currencyValue)
         $("#randomNumber").text(currencyValue);
@@ -29,6 +30,7 @@ $(document).ready(function()  {
         } 
  
   function win()  {
+
   alert("You won!");
     wins++; 
     $("#numberWins").text(wins);
@@ -36,6 +38,7 @@ $(document).ready(function()  {
   }
   
   function lose() {
+
   alert ("Awww Try again...");
     losses++;
     $("#numberLosses").text(losses);
@@ -43,6 +46,7 @@ $(document).ready(function()  {
   }
   
     $("#ring").on("click", function() {
+
       score = score + ringPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
@@ -55,6 +59,7 @@ $(document).ready(function()  {
           }   
     })  
     $("#wumpa").on("click", function()  {
+
       score = score + wumpaPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
@@ -66,6 +71,7 @@ $(document).ready(function()  {
           } 
     })  
     $("#coin").on("click", function() {
+
       score = score + coinPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score);
@@ -78,6 +84,7 @@ $(document).ready(function()  {
           } 
     })  
     $("#rupee").on("click", function()  {
+
       score = score + rupeePoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
