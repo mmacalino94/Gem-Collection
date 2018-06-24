@@ -1,28 +1,29 @@
 $(document).ready(function()  {
+    
+    var score= 0; 
+    var wins= 0;
+    var losses = 0;
+
     var currencyValue=Math.floor(Math.random()*100+19)
     
     $("#randomNumber").text(currencyValue);
     
-    var num1= Math.floor(Math.random()*11+1)
-    var num2= Math.floor(Math.random()*11+1)
-    var num3= Math.floor(Math.random()*11+1)
-    var num4= Math.floor(Math.random()*11+1)
+    var ringPoint= Math.floor(Math.random()*11+1)
+    var wumpaPoint= Math.floor(Math.random()*11+1)
+    var coinPoint= Math.floor(Math.random()*11+1)
+    var rupeePoint= Math.floor(Math.random()*11+1)
    
-    var score= 0; 
-    var wins= 0;
-    var losses = 0;
-   
-  $("#numberWins").text(wins);
-  $("#numberLosses").text(losses);
+    $("#numberWins").text(wins);
+    $("#numberLosses").text(losses);
  
   function reset()  {
         currencyValue=Math.floor(Math.random()*100+19);
         console.log(currencyValue)
         $("#randomNumber").text(currencyValue);
-        num1= Math.floor(Math.random()*11+1);
-        num2= Math.floor(Math.random()*11+1);
-        num3= Math.floor(Math.random()*11+1);
-        num4= Math.floor(Math.random()*11+1);
+        ringPoint= Math.floor(Math.random()*11+1);
+        wumpaPoint= Math.floor(Math.random()*11+1);
+        coinPoint= Math.floor(Math.random()*11+1);
+        rupeePoint= Math.floor(Math.random()*11+1);
         score= 0;
         $("#finalTotal").text(score);
         } 
@@ -34,57 +35,57 @@ $(document).ready(function()  {
     reset();
   }
   
-  function lose(){
-  alert ("You lose!");
+  function lose() {
+  alert ("Awww Try again...");
     losses++;
     $("#numberLosses").text(losses);
     reset()
   }
   
-    $("#chaos").on ("click", function(){
-      score = score + num1;
+    $("#ring").on("click", function() {
+      score = score + ringPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
             
-          if (score == currencyValue){
+          if (score == currencyValue) {
             win();
           }
-          else if ( score > currencyValue){
+          else if ( score > currencyValue)  {
             lose();
           }   
     })  
-    $("#wumpa").on ("click", function(){
-      score = score + num2;
+    $("#wumpa").on("click", function()  {
+      score = score + wumpaPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
           if (score == currencyValue){
             win();
           }
-          else if ( score > currencyValue){
+          else if ( score > currencyValue)  {
             lose();
           } 
     })  
-    $("#coin").on ("click", function(){
-      score = score + num3;
+    $("#coin").on("click", function() {
+      score = score + coinPoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score);
   
-            if (score == currencyValue){
+            if (score == currencyValue) {
             win();
           }
-          else if ( score > currencyValue){
+          else if ( score > currencyValue)  {
             lose();
           } 
     })  
-    $("#rupee").on ("click", function(){
-      score = score + num4;
+    $("#rupee").on("click", function()  {
+      score = score + rupeePoint;
       console.log("New score= " + score);
       $("#finalTotal").text(score); 
         
-            if (score == currencyValue){
+            if (score == currencyValue) {
             win();
           }
-          else if ( score > currencyValue){
+          else if ( score > currencyValue)  {
             lose();
           }
     });   

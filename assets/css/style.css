@@ -12,7 +12,6 @@ body	{
 
 }
 
-
 div	{
 	margin: 2px;
 	margin-left: 5px;
@@ -26,8 +25,13 @@ h1, h3, span	{
 	font-weight: bold;
 	text-align: center;
 }
-h1	{
+
+h2	{
+	font-weight: 100;
+}
+.label	{
 	font-size: 30pt;
+	color: lime;
 }
 ol	{
 	list-style: decimal inside; 
@@ -41,23 +45,41 @@ p	{
 	color: white;
 }
 
+
 div.header, div.instructions	{
 	width: 50%;
+	margin-left: 25%;
 }
 
-.goal, .score	{
+.goal	{
 	float: left;
+	text-align: center;
 	width: 15%;
 	height: 60px;
+	margin-left: 25%;
 }
 .userTotal	{
+	float: left;
+	text-align: center;
 	width: 15%;
 	height: 60px;
+	margin-left: 42%;
+	margin-top: -11%;
 }
 .currency	{
 	clear: both;
+	margin-left: 37%;
+	margin-top: 5%;
 }
 .gemImage	{
 	height: 60px;
 	margin: 10px;
+}
+
+.score	{
+	float: left;
+	text-align: center;
+	width: 15%;
+	height: 60px;
+	margin-left: 19.3%;
 }
